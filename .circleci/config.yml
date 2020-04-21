@@ -11,7 +11,7 @@ node: &node
   working_directory: ~/repo
   executor:
     name: node/default
-    tag: '12.16.0'
+    tag: "12.16.0"
 
 # オーブ
 orbs:
@@ -29,4 +29,5 @@ jobs:
 workflows:
   hello-workflow:
     jobs:
-      - hello
+      - hello:
+        message: Hi!
