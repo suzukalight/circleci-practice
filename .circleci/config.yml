@@ -24,6 +24,11 @@ jobs:
     <<: *node
     steps:
       - run: echo "<< parameters.message >>"
+  goodbye: 
+    <<: *defaults
+    <<: *node
+    steps: 
+      - run: echo "goodbye."
 
 # ワークフロー
 workflows:
@@ -31,3 +36,4 @@ workflows:
     jobs:
       - hello:
           message: Hi!
+      - goodbye
