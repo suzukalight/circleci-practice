@@ -30,4 +30,4 @@ workflows:
   hello-workflow:
     jobs:
       - hello:
-        message: Hi!
+          message: Hi!
