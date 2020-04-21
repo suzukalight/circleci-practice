@@ -34,8 +34,9 @@ jobs:
 workflows:
   hello-workflow:
     jobs:
+      - start_apporve:
+          type: approval
       - hello:
           message: Hi!
       - goodbye:
-          requires:
-            - hello
+          requires: [hello, start_apporve]
